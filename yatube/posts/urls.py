@@ -11,8 +11,8 @@ urlpatterns = [
     path('posts/<int:post_id>/', views.post_detail, name='post_detail'),
     path(
         'posts/<int:post_id>/edit/',
-        views.post_edit.as_view(),
+        views.PostEdit.as_view(),
         name='post_edit'
     ),
-    path('create/', views.post_create.as_view(), name='post_create'),
+    path('create/', views.PostCreate.as_view(), name='post_create'),
 ]
